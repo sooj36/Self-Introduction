@@ -6,4 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <TextView
+        android:id="@+id/home_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <TextView
+        android:id="@+id/home_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <TextView
+        android:id="@+id/home_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생년월일"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <TextView
+        android:id="@+id/home_mbti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MBTI"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <Button
+        android:id="@+id/home_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종료"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="471dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
