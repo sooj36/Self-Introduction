@@ -11,10 +11,10 @@
 
 
     <TextView
-        android:id="@+id/textView_id"
+        android:id="@+id/TextView_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID"
+        android:text="@string/signin_id_tv"
         android:textSize="10pt"
         android:textStyle="bold"
         android:typeface="serif"
@@ -26,10 +26,10 @@
     <!--        app:layout_constraintVertical_bias="0.621" />-->
 
     <EditText
-        android:id="@+id/textView_id"
+        android:id="@+id/editText_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="아이디를 입력하세요"
+        android:hint="@string/signin_name"
         android:inputType="text"
         android:textSize="9pt"
         android:textStyle="normal"
@@ -45,10 +45,10 @@
     ]]>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/TextView_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PASSWORD"
+        android:text="@string/signin_password"
         android:textSize="10pt"
         android:textStyle="bold"
         android:typeface="serif"
@@ -59,10 +59,10 @@
         app:layout_constraintVertical_bias="0.476" />
 
     <EditText
-        android:id="@+id/textView2"
+        android:id="@+id/editText_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="비밀번호를 입력하세요"
+        android:hint="@string/signin_password_et"
         android:inputType="textPassword"
         android:textSize="9pt"
         android:textStyle="normal"
@@ -71,6 +71,8 @@
         app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="319dp" />
+
+    <!--        app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
 
     <ImageView
         android:id="@+id/imageView"
@@ -81,16 +83,15 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
-    <!--        app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
-
     <Button
-        android:id="@+id/login"
+        android:id="@+id/loginbutton"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:background="#0C28C3"
+        android:background="#767988"
         android:baselineAligned="false"
-        android:text="로그인"
+        android:text="@string/signin_loginbutton"
+        android:clickable="false"
         android:textColor="#FDFDFD"
         android:textSize="8pt"
         android:textStyle="bold"
@@ -101,12 +102,12 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/signupbutton"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:background="#172887"
-        android:text="회원가입"
+        android:text="@string/signin_signupbutton"
         android:textColor="#FDFDFD"
         android:textSize="8pt"
         android:textStyle="bold"

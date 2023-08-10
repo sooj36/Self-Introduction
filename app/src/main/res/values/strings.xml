@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Self-Introduction</string>
+    <string name="signin_name">아이디를 입력하세요</string>
+    <string name="signin_password">PASSWORD</string>
+    <string name="signin_password_et">비밀번호를 입력하세요</string>
+    <string name="signin_loginbutton">로그인</string>
+    <string name="signin_signupbutton">회원가입</string>
+    <string name="signin_id_tv">ID</string>
 </resources>
