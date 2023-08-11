@@ -103,7 +103,7 @@ class SignInActivity : AppCompatActivity() {
 
         }
         else {
-//                loginbutton.isEnabled = false
+            loginbutton.isEnabled = false
             loginbutton.setBackgroundColor(Color.GRAY)
             Toast.makeText(this, "아이디와 비밀번호를 확인하세요", Toast.LENGTH_SHORT).show()
 
