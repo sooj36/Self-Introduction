@@ -24,6 +24,8 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="35dp"
         android:text="아이디"
+        android:textSize="10pt"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,10 +37,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:text="이름"
+        android:textSize="10pt"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_id" />
 
@@ -46,10 +50,12 @@
         android:id="@+id/home_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:text="생년월일"
+        android:textSize="10pt"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/home_name"
-        tools:layout_editor_absoluteX="40dp" />
+        tools:layout_editor_absoluteX="53dp" />
 
     <TextView
         android:id="@+id/home_mbti"
@@ -57,8 +63,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="MBTI"
+        android:textSize="10pt"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/home_birth"
-        tools:layout_editor_absoluteX="40dp" />
+        tools:layout_editor_absoluteX="59dp" />
 
     <Button
         android:id="@+id/home_close"
@@ -67,6 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
         android:text="종료"
+        android:textSize="9pt"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="138dp" />
 
