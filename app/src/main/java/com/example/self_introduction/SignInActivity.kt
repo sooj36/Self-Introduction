@@ -12,56 +12,70 @@ import android.widget.TextView
 import android.widget.Toast
 
 class SignInActivity : AppCompatActivity() {
+    private val editText_id : EditText by lazy { findViewById(R.id.editText_id) }
+    private val editText_password : EditText by lazy { findViewById(R.id.editText_password) }
+    private val loginbutton : Button by lazy { findViewById(R.id.loginbutton) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        val editText_id = findViewById<EditText>(R.id.editText_id)
         val textView_id = findViewById<TextView>(R.id.TextView_id)
-
-        val editText_password = findViewById<EditText>(R.id.editText_password)
         val textView_password = findViewById<TextView>(R.id.TextView_password)
 
-        val loginbutton = findViewById<Button>(R.id.loginbutton)
+
+        var idInputComplete = false
+        var pwInputComplete = false
 
         editText_id.addTextChangedListener (object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                TODO("Not yet implemented")
+                if (s != null) {
+                    idInputComplete = s.length > 1
+                }
+                if (idInputComplete && pwInputComplete) {
+                    updateLoginButton()
+                }
             }
-
             override fun afterTextChanged(s: Editable?) {
-                TODO("Not yet implemented")
-            }
-
-
-        })
-
-        fun updateLoginButton() {
-            val input_id = editText_id.text.toString()
-            val input_password = editText_password.text.toString()
-
-            if (input_id.isNotEmpty() && input_password.isNotEmpty()) {
-                loginbutton.isEnabled = true
-                loginbutton.setBackgroundColor(Color.BLUE)
-                Toast.makeText(this, "로그인 성공 !", Toast.LENGTH_SHORT).show()
-
 
             }
-            else {
-//                loginbutton.isEnabled = false
-                loginbutton.setBackgroundColor(Color.GRAY)
-                Toast.makeText(this, "아이디와 비밀번호를 확인하세요", Toast.LENGTH_SHORT).show()
-
             }
-        }
+    )
 
-        loginbutton.setOnClickListener {
-            updateLoginButton()
-        }
+
+            editText_password.addTextChangedListener (object : TextWatcher {
+                override fun beforeTextChanged(
+                    s: CharSequence?,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) {
+
+                }
+
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    if (s != null) {
+                        pwInputComplete = s.length > 1
+                    }
+                    if (idInputComplete && pwInputComplete) {
+                        updateLoginButton()
+                    }
+
+                }
+                override fun afterTextChanged(s: Editable?) {
+
+                }
+            })
+
+
+
+            loginbutton.setOnClickListener {
+                updateLoginButton()
+            }
+
 
 
         val btn2 = findViewById<Button>(R.id.loginbutton) //로그인 실행
@@ -74,6 +88,24 @@ class SignInActivity : AppCompatActivity() {
         btn.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
+
+        }
+    }
+    fun updateLoginButton() {
+        val input_id = editText_id.text.toString()
+        val input_password = editText_password.text.toString()
+
+        if (input_id.isNotEmpty() && input_password.isNotEmpty()) {
+            loginbutton.isEnabled = true
+            loginbutton.setBackgroundColor(Color.BLUE)
+            Toast.makeText(this, "로그인 성공 !", Toast.LENGTH_SHORT).show()
+
+
+        }
+        else {
+//                loginbutton.isEnabled = false
+            loginbutton.setBackgroundColor(Color.GRAY)
+            Toast.makeText(this, "아이디와 비밀번호를 확인하세요", Toast.LENGTH_SHORT).show()
 
         }
     }
