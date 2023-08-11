@@ -1,3 +1,3 @@
 
-q
-Aapp/src/main/java/com/example/self_introduction/SignUpActivity.kt,6\5\65b639d237670790961ab43328389b17456483a6
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e

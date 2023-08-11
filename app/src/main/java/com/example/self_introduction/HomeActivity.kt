@@ -1,9 +1,12 @@
 package com.example.self_introduction
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import java.time.Instant
 
 class HomeActivity : AppCompatActivity() {
@@ -15,5 +18,6 @@ class HomeActivity : AppCompatActivity() {
         btn.setOnClickListener{
             finish()
         }
+
     }
 }

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -35,9 +36,8 @@ class SignInActivity : AppCompatActivity() {
                 if (s != null) {
                     idInputComplete = s.length > 1
                 }
-                if (idInputComplete && pwInputComplete) {
                     updateLoginButton()
-                }
+
             }
             override fun afterTextChanged(s: Editable?) {
 
@@ -60,9 +60,8 @@ class SignInActivity : AppCompatActivity() {
                     if (s != null) {
                         pwInputComplete = s.length > 1
                     }
-                    if (idInputComplete && pwInputComplete) {
-                        updateLoginButton()
-                    }
+                    updateLoginButton()
+
 
                 }
                 override fun afterTextChanged(s: Editable?) {
@@ -90,23 +89,28 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
+
     }
     fun updateLoginButton() {
         val input_id = editText_id.text.toString()
         val input_password = editText_password.text.toString()
+
+        Log.d("SUJIN", "ID:$input_id, password:$input_password")
 
         if (input_id.isNotEmpty() && input_password.isNotEmpty()) {
             loginbutton.isEnabled = true
             loginbutton.setBackgroundColor(Color.BLUE)
             Toast.makeText(this, "로그인 성공 !", Toast.LENGTH_SHORT).show()
 
-
+            Log.d("SOOJ", "ID:$input_id, password:$input_password")
         }
         else {
             loginbutton.isEnabled = false
             loginbutton.setBackgroundColor(Color.GRAY)
-            Toast.makeText(this, "아이디와 비밀번호를 확인하세요", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "아이디와 비밀번호를 확인하세요", Toast.LENGTH_LONG).show()
 
         }
+        Log.d("SOOJIN", "ID:$input_id, password:$input_password")
     }
 }

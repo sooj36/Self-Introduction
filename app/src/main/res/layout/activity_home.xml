@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <ImageView
+        android:id="@+id/home_image"
+        android:layout_width="333dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/smile" />
+
     <TextView
         android:id="@+id/home_id"
         android:layout_width="wrap_content"
@@ -15,9 +25,9 @@
         android:layout_marginTop="35dp"
         android:text="아이디"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.039"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/home_image" />
 
     <TextView
         android:id="@+id/home_name"
@@ -52,6 +62,7 @@
 
     <Button
         android:id="@+id/home_close"
+        android:onClick="doOnBtnClick_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
@@ -59,13 +70,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="138dp" />
 
-    <ImageView
-        android:id="@+id/home_image"
-        android:layout_width="333dp"
-        android:layout_height="255dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/smile" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
