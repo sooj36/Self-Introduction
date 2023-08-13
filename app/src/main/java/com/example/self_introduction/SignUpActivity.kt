@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 
 class SignUpActivity : AppCompatActivity() {
@@ -22,10 +22,6 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-
-        val name_tv = findViewById<TextView>(R.id.name_tv)
-        val id_tv = findViewById<TextView>(R.id.id_tv)
-        val pw_tv = findViewById<TextView>(R.id.pw_tv)
 
         var nameInputComplete = false
         var idInputComplete = false
@@ -42,7 +38,7 @@ class SignUpActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        name_et.addTextChangedListener (object : TextWatcher { //아이디
+        id_et.addTextChangedListener (object : TextWatcher { //아이디
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -56,7 +52,7 @@ class SignUpActivity : AppCompatActivity() {
         })
 
 
-        name_et.addTextChangedListener (object : TextWatcher { //비밀번호
+        pw_et.addTextChangedListener (object : TextWatcher { //비밀번호
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int){}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (s != null) {
@@ -65,6 +61,7 @@ class SignUpActivity : AppCompatActivity() {
                 updateSignUpButton()
             }
             override fun afterTextChanged(s: Editable?) {}
+
         })
 
 
@@ -87,11 +84,15 @@ class SignUpActivity : AppCompatActivity() {
             signup_button.isEnabled = true
             signup_button.setBackgroundColor(Color.BLUE)
             Toast.makeText(this, "회원가입 성공 !", Toast.LENGTH_LONG).show()
+
+            Log.d("SOO36", "회원가입 성공!!!!")
         }
         else {
             signup_button.isEnabled = false
-//            signup_button.setBackgroundColor(Color.GRAY)
+            signup_button.setBackgroundColor(Color.GRAY)
             Toast.makeText(this, "입력되지 않은 정보가 있습니다", Toast.LENGTH_LONG).show()
+
+            Log.d("SOO0813", "입력안된 정보 있다")
         }
     }
     }
