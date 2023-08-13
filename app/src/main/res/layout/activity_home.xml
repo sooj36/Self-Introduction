@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/home_image"
-        android:layout_width="333dp"
-        android:layout_height="255dp"
+        android:layout_width="289dp"
+        android:layout_height="177dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="24dp"
-        android:text="이름"
+        android:text="이름   이수진"
         android:textSize="10pt"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,35 +50,40 @@
         android:id="@+id/home_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
         android:layout_marginTop="24dp"
-        android:text="생년월일"
+        android:text="생년월일 1996_03_06"
         android:textSize="10pt"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/home_name"
-        tools:layout_editor_absoluteX="53dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_name" />
 
     <TextView
         android:id="@+id/home_mbti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
         android:layout_marginTop="24dp"
-        android:text="MBTI"
+        android:text="MBTI   INTP"
         android:textSize="10pt"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/home_birth"
-        tools:layout_editor_absoluteX="59dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_birth" />
 
     <Button
         android:id="@+id/home_close"
-        android:onClick="doOnBtnClick_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
+        android:onClick="doOnBtnClick_home"
         android:text="종료"
         android:textSize="9pt"
         android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="138dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
