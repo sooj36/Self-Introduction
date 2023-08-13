@@ -95,7 +95,7 @@ class SignUpActivity : AppCompatActivity() {
             signup_button.setBackgroundColor(Color.GRAY)
             Toast.makeText(this, "입력되지 않은 정보가 있습니다", Toast.LENGTH_LONG).show()
 
-            Log.d("SOO0813", "입력안된 정보 있다")
+            Log.d("SOO0813", "입력 안된 정보 있다")
         }
     }
     }

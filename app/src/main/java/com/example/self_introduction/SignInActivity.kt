@@ -9,7 +9,6 @@ import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 
 class SignInActivity : AppCompatActivity() {
@@ -19,9 +18,6 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
-
-        val textView_id = findViewById<TextView>(R.id.TextView_id)
-        val textView_password = findViewById<TextView>(R.id.TextView_password)
 
 
         var idInputComplete = false
