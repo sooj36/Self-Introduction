@@ -71,7 +71,10 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        val btn4 = findViewById<Button>(R.id.signup_button)
+        btn4.setOnClickListener {
+            finish()
+        }
         }
 
 
