@@ -38,7 +38,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="24dp"
-        android:text="이름"
+        android:text="이름   이수진"
         android:textSize="10pt"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
